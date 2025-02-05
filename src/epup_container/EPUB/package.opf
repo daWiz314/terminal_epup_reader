@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId" prefix="ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabulary-extensions-1.0/">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:identifier id="BookId">urn:uuid:12c6fed8-ec29-4343-ab36-9a48312ee01d</dc:identifier>
+    <meta refines="#BookId" property="identifier-type" scheme="xsd:string">uuid</meta>
+    <dc:title id="metadata_id_title">Crime and Punishment</dc:title>
+    <meta refines="#metadata_id_title" property="title-type">main</meta>
+    <dc:language>en-us</dc:language>
+    <dc:creator id="metadata_id_creator">Fyodor Dostoevsky</dc:creator>
+    <meta refines="#metadata_id_creator" property="role" scheme="marc:relators" id="role">aut</meta>
+    <dc:publisher>BB eBooks Co., Ltd.</dc:publisher>
+    <dc:date>2016-01-03</dc:date>
+    <meta property="dcterms:modified">2016-01-03T08:19:42Z</meta>
+    <meta name="cover" content="My_Cover_ID" />
+    <dc:description>(From Wikipedia): Crime and Punishment (Russian: Преступлéние и наказáние, Prestupleniye i nakazaniye) is a novel by the Russian author Fyodor Dostoyevsky. It was first published in the literary journal The Russian Messenger in twelve monthly installments during 1866. It was later published in a single volume. It is the second of Dostoyevsky’s full-length novels following his return from ten years of exile in Siberia. Crime and Punishment is the first great novel of his “mature” period of writing. Crime and Punishment focuses on the mental anguish and moral dilemmas of Rodion Raskolnikov, an impoverished ex-student in St. Petersburg who formulates and executes a plan to kill an unscrupulous pawnbroker for her cash. Raskolnikov argues that with the pawnbroker’s money he can perform good deeds to counterbalance the crime, while ridding the world of a worthless vermin. He also commits this murder to test his own hypothesis that some people are naturally capable of such things, and even have the right to do them. Several times throughout the novel, Raskolnikov justifies his actions by comparing himself with Napoleon Bonaparte, believing that murder is permissible in pursuit of a higher purpose.</dc:description>
+    <dc:rights>Public Domain</dc:rights>
+    <dc:coverage>Worldwide</dc:coverage>
+    <dc:subject>Fiction</dc:subject>
+    <dc:subject>Classics</dc:subject>
+    <dc:contributor id="metadata_id_contributor1">Constance Garnett</dc:contributor>
+    <meta refines="#metadata_id_contributor1" property="role" scheme="marc:relators">trl</meta>
+    <meta refines="#metadata_id_contributor1" property="display-seq">1</meta>
+    <dc:contributor id="metadata_id_contributor2">BB eBooks</dc:contributor>
+    <meta refines="#metadata_id_contributor2" property="role" scheme="marc:relators">bkd</meta>
+    <meta refines="#metadata_id_contributor2" property="display-seq">2</meta>
+    <meta property="ibooks:specified-fonts">true</meta>
+  <!--Created 2016-Jan-03 15:19 for Platform EPUB3-->
+  </metadata>
+  <manifest>
+    <item href="coverpage.xhtml" id="htmlcoverpage" media-type="application/xhtml+xml" />
+    <item href="cover.jpg" id="My_Cover_ID" media-type="image/jpeg" properties="cover-image" />
+    <item href="nav.xhtml" id="epub3_nav" media-type="application/xhtml+xml" properties="nav" />
+    <item href="toc.ncx" id="epub2_ncx" media-type="application/x-dtbncx+xml" />
+    <item href="c/htmltoc.xhtml" id="htmltoc" media-type="application/xhtml+xml" />
+    <item href="c/c1.xhtml" id="c1_id" media-type="application/xhtml+xml" />
+    <item href="c/c2.xhtml" id="c2_id" media-type="application/xhtml+xml" />
+    <item href="c/c3.xhtml" id="c3_id" media-type="application/xhtml+xml" />
+    <item href="c/c4.xhtml" id="c4_id" media-type="application/xhtml+xml" />
+    <item href="c/c5.xhtml" id="c5_id" media-type="application/xhtml+xml" />
+    <item href="c/c6.xhtml" id="c6_id" media-type="application/xhtml+xml" />
+    <item href="c/c7.xhtml" id="c7_id" media-type="application/xhtml+xml" />
+    <item href="c/c8.xhtml" id="c8_id" media-type="application/xhtml+xml" />
+    <item href="c/c9.xhtml" id="c9_id" media-type="application/xhtml+xml" />
+    <item href="c/c10.xhtml" id="c10_id" media-type="application/xhtml+xml" />
+    <item href="c/c11.xhtml" id="c11_id" media-type="application/xhtml+xml" />
+    <item href="c/c12.xhtml" id="c12_id" media-type="application/xhtml+xml" />
+    <item href="c/c13.xhtml" id="c13_id" media-type="application/xhtml+xml" />
+    <item href="c/c14.xhtml" id="c14_id" media-type="application/xhtml+xml" />
+    <item href="c/c15.xhtml" id="c15_id" media-type="application/xhtml+xml" />
+    <item href="c/c16.xhtml" id="c16_id" media-type="application/xhtml+xml" />
+    <item href="c/c17.xhtml" id="c17_id" media-type="application/xhtml+xml" />
+    <item href="c/c18.xhtml" id="c18_id" media-type="application/xhtml+xml" />
+    <item href="c/c19.xhtml" id="c19_id" media-type="application/xhtml+xml" />
+    <item href="c/c20.xhtml" id="c20_id" media-type="application/xhtml+xml" />
+    <item href="c/c21.xhtml" id="c21_id" media-type="application/xhtml+xml" />
+    <item href="c/c22.xhtml" id="c22_id" media-type="application/xhtml+xml" />
+    <item href="c/c23.xhtml" id="c23_id" media-type="application/xhtml+xml" />
+    <item href="c/c24.xhtml" id="c24_id" media-type="application/xhtml+xml" />
+    <item href="c/c25.xhtml" id="c25_id" media-type="application/xhtml+xml" />
+    <item href="c/c26.xhtml" id="c26_id" media-type="application/xhtml+xml" />
+    <item href="c/c27.xhtml" id="c27_id" media-type="application/xhtml+xml" />
+    <item href="c/c28.xhtml" id="c28_id" media-type="application/xhtml+xml" />
+    <item href="c/c29.xhtml" id="c29_id" media-type="application/xhtml+xml" />
+    <item href="c/c30.xhtml" id="c30_id" media-type="application/xhtml+xml" />
+    <item href="c/c31.xhtml" id="c31_id" media-type="application/xhtml+xml" />
+    <item href="c/c32.xhtml" id="c32_id" media-type="application/xhtml+xml" />
+    <item href="c/c33.xhtml" id="c33_id" media-type="application/xhtml+xml" />
+    <item href="c/c34.xhtml" id="c34_id" media-type="application/xhtml+xml" />
+    <item href="c/c35.xhtml" id="c35_id" media-type="application/xhtml+xml" />
+    <item href="c/c36.xhtml" id="c36_id" media-type="application/xhtml+xml" />
+    <item href="c/c37.xhtml" id="c37_id" media-type="application/xhtml+xml" />
+    <item href="c/c38.xhtml" id="c38_id" media-type="application/xhtml+xml" />
+    <item href="c/c39.xhtml" id="c39_id" media-type="application/xhtml+xml" />
+    <item href="c/c40.xhtml" id="c40_id" media-type="application/xhtml+xml" />
+    <item href="c/c41.xhtml" id="c41_id" media-type="application/xhtml+xml" />
+    <item href="c/c42.xhtml" id="c42_id" media-type="application/xhtml+xml" />
+    <item href="c/c43.xhtml" id="c43_id" media-type="application/xhtml+xml" />
+    <item href="c/c44.xhtml" id="c44_id" media-type="application/xhtml+xml" />
+    <item href="c/c45.xhtml" id="c45_id" media-type="application/xhtml+xml" />
+    <item href="c/c46.xhtml" id="c46_id" media-type="application/xhtml+xml" />
+    <item href="c/c47.xhtml" id="c47_id" media-type="application/xhtml+xml" />
+    <item href="c/c48.xhtml" id="c48_id" media-type="application/xhtml+xml" />
+    <item href="c/c49.xhtml" id="c49_id" media-type="application/xhtml+xml" />
+    <item href="c/c50.xhtml" id="c50_id" media-type="application/xhtml+xml" />
+    <item href="s/s.css" id="css_id" media-type="text/css" />
+    <item href="i/i1.png" id="i1_id" media-type="image/png" />
+    <item href="i/i2.png" id="i2_id" media-type="image/png" />
+    <item href="fonts/FoglihtenNo07_License.txt" id="f1_id" media-type="text/plain" />
+    <item href="fonts/FoglihtenNo07_Subset_Deep.ttf" id="f2_id" media-type="application/vnd.ms-opentype" />
+    <item href="fonts/PlayfairDisplayLicense.txt" id="f3_id" media-type="text/plain" />
+    <item href="fonts/PlayfairDisplay_Regular_Subset_Deep.ttf" id="f4_id" media-type="application/vnd.ms-opentype" />
+    <item href="fonts/SourceSansPro_It_Subset.ttf" id="f5_id" media-type="application/vnd.ms-opentype" />
+    <item href="fonts/SourceSansPro_License.txt" id="f6_id" media-type="text/plain" />
+    <item href="fonts/SourceSansPro_Regular_Subset.ttf" id="f7_id" media-type="application/vnd.ms-opentype" />
+    <item href="fonts/SourceSansPro_SemiboldIt_Subset.ttf" id="f8_id" media-type="application/vnd.ms-opentype" />
+    <item href="fonts/SourceSansPro_Semibold_Subset.ttf" id="f9_id" media-type="application/vnd.ms-opentype" />
+    <item href="fonts/StarFont1.ttf" id="f10_id" media-type="application/vnd.ms-opentype" />
+    <item href="fonts/StarfontLicense.txt" id="f11_id" media-type="text/plain" />
+  </manifest>
+  <spine toc="epub2_ncx">
+    <itemref idref="htmlcoverpage" />
+    <itemref idref="c1_id" />
+    <itemref idref="c2_id" />
+    <itemref idref="htmltoc" />
+    <itemref idref="c3_id" />
+    <itemref idref="c4_id" />
+    <itemref idref="c5_id" />
+    <itemref idref="c6_id" />
+    <itemref idref="c7_id" />
+    <itemref idref="c8_id" />
+    <itemref idref="c9_id" />
+    <itemref idref="c10_id" />
+    <itemref idref="c11_id" />
+    <itemref idref="c12_id" />
+    <itemref idref="c13_id" />
+    <itemref idref="c14_id" />
+    <itemref idref="c15_id" />
+    <itemref idref="c16_id" />
+    <itemref idref="c17_id" />
+    <itemref idref="c18_id" />
+    <itemref idref="c19_id" />
+    <itemref idref="c20_id" />
+    <itemref idref="c21_id" />
+    <itemref idref="c22_id" />
+    <itemref idref="c23_id" />
+    <itemref idref="c24_id" />
+    <itemref idref="c25_id" />
+    <itemref idref="c26_id" />
+    <itemref idref="c27_id" />
+    <itemref idref="c28_id" />
+    <itemref idref="c29_id" />
+    <itemref idref="c30_id" />
+    <itemref idref="c31_id" />
+    <itemref idref="c32_id" />
+    <itemref idref="c33_id" />
+    <itemref idref="c34_id" />
+    <itemref idref="c35_id" />
+    <itemref idref="c36_id" />
+    <itemref idref="c37_id" />
+    <itemref idref="c38_id" />
+    <itemref idref="c39_id" />
+    <itemref idref="c40_id" />
+    <itemref idref="c41_id" />
+    <itemref idref="c42_id" />
+    <itemref idref="c43_id" />
+    <itemref idref="c44_id" />
+    <itemref idref="c45_id" />
+    <itemref idref="c46_id" />
+    <itemref idref="c47_id" />
+    <itemref idref="c48_id" />
+    <itemref idref="c49_id" />
+    <itemref idref="c50_id" />
+  </spine>
+  <guide>
+    <reference href="coverpage.xhtml" type="cover" title="Cover" />
+    <reference href="c/htmltoc.xhtml" type="toc" title="Table of Contents" />
+    <reference href="c/c1.xhtml#i1" type="text" title="Beginning" />
+  </guide>
+</package>

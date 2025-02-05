@@ -1,0 +1,415 @@
+@charset "utf-8";
+@namespace epub "http://www.idpf.org/2007/ops";
+@page
+{
+margin: 5pt;
+}
+html, body, div, span, h1, h2, h3, p, a, img, nav, section
+{
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+vertical-align: baseline;
+}
+ol, li
+{
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+vertical-align: baseline;
+}
+body
+{
+text-align: justify;
+line-height: 120%;
+}
+ol
+{
+margin: 1.0em 0 0 2.0em;
+text-align: left;
+}
+h1
+{
+text-indent: 0;
+text-align: center;
+margin: 100px 0 0 0;
+font-size: 2.0em;
+font-weight: bold;
+}
+h2
+{
+text-indent: 0;
+text-align: center;
+margin: 50px 0 0 0;
+font-size: 1.5em;
+font-weight: bold;
+}
+h3
+{
+text-indent: 0;
+text-align: left;
+font-size: 1.2em;
+font-weight: bold;
+margin: 1.0em 0 0 0;
+}
+p
+{
+text-indent: 1.5em;
+margin: 0;
+text-align: justify;
+}
+h2.c9
+{
+text-indent: 0;
+text-align: center;
+margin: 100px 0 0 0;
+font-size: 1.8em;
+font-weight: bold;
+}
+h2.c10
+{
+font-size: 1.6em;
+text-align: center;
+}
+h2.c1
+{
+font-size: 1.3em;
+text-align: center;
+}
+h3.c25
+{
+text-align: center;
+}
+p.c3
+{
+text-indent: 0;
+text-align: center;
+font-size: 1.3em;
+margin: 1.0em 0 0 0;
+}
+p.c20
+{
+text-indent: 0;
+margin: 1.0em 0 0 0;
+text-align: center;
+}
+p.c4
+{
+text-indent: 0;
+margin: 0.8em 0 0 0;
+text-align: center;
+}
+p.c33
+{
+text-indent: 0;
+margin: 0.4em 0 0 0;
+text-align: center;
+}
+p.c32
+{
+text-indent: 0;
+margin: 0.2em 0 0 0;
+text-align: center;
+}
+p.c12
+{
+margin: 1.5em 0 0 0;
+text-indent: 0;
+}
+p.c28
+{
+margin: 0.8em 0 0 0;
+text-indent: 0;
+}
+p.c8
+{
+margin: 1.5em 0 0 0;
+text-indent: 0;
+}
+p.c6
+{
+margin: 0.8em 0 0 0;
+text-indent: 0;
+font-size: 0.85em;
+}
+p.c7
+{
+margin: 0;
+text-indent: 0;
+font-size: 0.85em;
+}
+p.c21
+{
+margin: 1.0em 0 0 0;
+text-indent: 0;
+}
+p.c19
+{
+margin: 0.8em 0 0 0;
+}
+p.c15
+{
+margin: 0.8em 1.5em 0 1.5em;
+text-indent: 0;
+}
+p.c16
+{
+margin: 0 1.5em 0 1.5em;
+text-indent: 1.5em;
+}
+p.c17
+{
+margin: 0.4em 1.5em 0 1.5em;
+text-indent: 0;
+text-align: right;
+}
+p.c18
+{
+margin: 0 1.5em 0 1.5em;
+text-indent: 0;
+text-align: right;
+}
+p.c23
+{
+font-size: 0.9em;
+margin: 0.5em 0 0 1.5em;
+text-indent: -1.5em;
+text-align: left;
+}
+p.toctexttop
+{
+margin: 0.8em 0 0 1.5em;
+text-indent: -1.5em;
+text-align: left;
+}
+p.c36
+{
+margin: 0.8em 0 0 1.5em;
+text-indent: -1.5em;
+text-align: left;
+font-weight: bold;
+}
+p.toctext
+{
+margin: 0.4em 0 0 1.5em;
+text-indent: -1.5em;
+text-align: left;
+}
+p.toctexttop a, p.toctext a, p.c36 a
+{
+text-decoration: none;
+}
+p.c27
+{
+text-indent: 0;
+margin: 1.0em 0 0 0;
+text-align: center;
+font-size: 0.85em;
+}
+img
+{
+max-width: 100%;
+max-height: 95%;
+}
+i
+{
+font-style: italic;
+}
+span.c14
+{
+font-variant: small-caps;
+}
+span.c24
+{
+font-size: 0.85em;
+}
+span.c13
+{
+font-size: 175%;
+font-weight: bold;
+}
+a.c22
+{
+text-decoration: none;
+}
+h1
+{
+line-height: 145%;
+}
+h2
+{
+line-height: 135%;
+}
+h3
+{
+line-height: 130%;
+}
+p.c3
+{
+line-height: 135%;
+}
+h1, h2, h3, p.c3, p.c20, p.c4, p.c33, p.c32, p.c17, p.c18, p.c36, p.toctext, p.toctexttop, p.c27, p.c27
+{
+-webkit-hyphens: none !important;
+-moz-hyphens: none;
+adobe-hyphenate: none;
+hyphens: none;
+}
+h1, h2, h3, p.c3, p.c20, p.c4, p.c33, p.c32, p.c17, p.c18, p.c36, p.toctext, p.toctexttop, p.c27, p.c27
+{
+-epub-hyphens: none;
+}
+h1, h2, h3
+{
+page-break-after: avoid;
+page-break-inside: avoid;
+}
+p.c27
+{
+page-break-inside: avoid;
+}
+p
+{
+widows: 2;
+orphans: 2;
+}
+nav#nav_xhtmltoc_ref ol li
+{
+list-style-type: none;
+}
+nav#nav_xhtmltoc_ref ol
+{
+margin-top: 0;
+margin-bottom: 0;
+}
+nav#nav_xhtmltoc_ref
+{
+margin: 1.0em 0 0 0;
+}
+nav#nav_xhtmltoc_landmarks
+{
+display: none;
+visibility: hidden;
+}
+span.ipc
+{
+text-align: center;
+}
+span.c13
+{
+font-weight: normal;
+}
+h3.c31
+{
+font-weight: bold;
+font-style: normal;
+font-size: 1.1em;
+text-align: center;
+}
+h2.c26
+{
+font-weight: bold;
+font-style: normal;
+font-size: 1.2em;
+text-align: center;
+}
+@font-face
+{
+font-family: "FogLihten";
+font-weight: bold;
+font-style: normal;
+src: url("../fonts/FoglihtenNo07_Subset_Deep.ttf");
+}
+@font-face
+{
+font-family: "PlayfairDisplay";
+font-weight: normal;
+font-style: normal;
+src: url("../fonts/PlayfairDisplay_Regular_Subset_Deep.ttf");
+}
+@font-face
+{
+font-family: "StarFont1";
+font-weight: normal;
+font-style: normal;
+src: url("../fonts/StarFont1.ttf");
+}
+@font-face
+{
+font-family: "SourceSans";
+font-weight: normal;
+font-style: normal;
+src: url("../fonts/SourceSansPro_Regular_Subset.ttf");
+}
+@font-face
+{
+font-family: "SourceSans";
+font-weight: bold;
+font-style: normal;
+src: url("../fonts/SourceSansPro_Semibold_Subset.ttf");
+}
+@font-face
+{
+font-family: "SourceSans";
+font-weight: normal;
+font-style: italic;
+src: url("../fonts/SourceSansPro_It_Subset.ttf");
+}
+@font-face
+{
+font-family: "SourceSans";
+font-weight: bold;
+font-style: italic;
+src: url("../fonts/SourceSansPro_SemiboldIt_Subset.ttf");
+}
+h1.c2, h2.c10, h2.c1, h2.c9, h3.c25
+{
+font-weight: bold;
+font-style: normal;
+font-family: "FogLihten",serif;
+}
+p.c3, span.c5
+{
+font-weight: normal;
+font-style: normal;
+font-family: "PlayfairDisplay",serif;
+}
+p.c20
+{
+font-weight: normal;
+font-style: normal;
+font-family: "StarFont1",serif;
+font-size: 1.0em;
+}
+span.c30
+{
+font-weight: normal;
+font-style: normal;
+font-family: "SourceSans",sans-serif;
+}
+h3.c31, h2.c26
+{
+font-weight: bold;
+font-style: normal;
+font-family: "SourceSans",sans-serif;
+}
+span.c29
+{
+font-weight: bold;
+font-style: normal;
+font-family: "SourceSans",sans-serif;
+}
+span.c34
+{
+font-weight: normal;
+font-style: italic;
+font-family: "SourceSans",sans-serif;
+}
+span.c35
+{
+font-weight: bold;
+font-style: italic;
+font-family: "SourceSans",sans-serif;
+}

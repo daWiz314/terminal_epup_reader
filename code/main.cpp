@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 
-#include "code/EPUP_parser.h"
+#include "EPUP_parser.h"
 
 
 // Function prototypes
@@ -15,7 +15,45 @@ void display_content(std::string content);
 int main(int arg, char* args[]) {
     init(); // Init ncurses
     std::string content = read_file("src/epup_container/EPUB/c/c5.xhtml"); // Get demo content to read
-    display_content(content); // Display content
+
+    P_object test(content); // Create test object
+    std::vector<std::string> temp = test.get_content(); // Get content
+
+    // TEST STUFF
+    int x, y;
+    getmaxyx(stdscr, y, x);
+    std::string temp_string;
+    
+    int temp_x = 0;
+    for (int i=0; i<temp.size(); i++) {
+        if (temp[i].length() >= x) {
+            temp_x += 1;
+            temp_string += temp[i];
+        } else {
+            temp_string += temp[i];
+        }
+        temp_string += "\n";
+        // if (temp_x == y) {
+        //     break;
+        // }
+    }
+    // std::cout << temp_string << std::endl;
+    // display_content(temp_string);
+
+    WINDOW *win = newwin(y, x, 0, 0);
+    box(win, 0, 0);
+    wrefresh(win);
+    mvwprintw(win, 0, 0, "Hello World!");
+    wrefresh(win);
+    getch();
+
+    // File output was just to make sure we were actually getting any data
+
+    // std::ofstream file("src/test.txt");
+    // file << temp_string;
+    // file.close();
+    // End ncurses
+    endwin();
     return 0;
 }
 
@@ -27,21 +65,24 @@ void init() {
     curs_set(0);
     keypad(stdscr, TRUE);
     cbreak();
+    return;
 }
 
+
 void display_content(std::string content) {
-    int max_x, max_y;
-    getmaxyx(stdscr, max_y, max_x); // We need full screen size to determine what to print
-    // Max content we can print to the screen
-    // To get this number, we will need to multiply max_x by max_y
-    // Then, we will split the content into lines, and print them to the screen
-    // If the content is bigger than the screen, we will need to scroll
-    // We will also need to handle the scrolling
-    std::string screen_content = content.substr(0, max_x * max_y);
-    printw(screen_content.c_str());
-    refresh();
+    // for(int i=0; i<content.size(); i++) {
+    //     mvprintw(i, 0, "%c", content[i]);
+    // }
+    clear();
+    int x, y;
+    getmaxyx(stdscr, y, x);
+    WINDOW *win = newwin(y, x, 0, 0);
+    box(win, 0, 0);
+    wrefresh(win);
+    mvwprintw(win, 0, 0, content.c_str());
+    wrefresh(win);
     getch();
-    return; // pause here
+    endwin();
 }
 
 // Read file content

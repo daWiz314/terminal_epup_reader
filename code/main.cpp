@@ -66,25 +66,37 @@ void display_content(std::string content) {
     int x, y; // Max bounds
 
     // TEST STUFF
+    // Set up window
     getmaxyx(stdscr, y, x); 
     WINDOW *win = newwin(y, x, 0, 0);
     box(win, 0, 0);
-    
-    int cur_x, cur_y = 1;
+
+    // Set up variables
+    int max_x = x-3;
+    int max_y = y-1;
+    int start_x, start_y = 3; 
+    int cur_x = start_x;
+    int cur_y = start_y;
+
+    // Actually print the content
     for(int i=0; i<content.size(); i++) {
-        if (cur_y >= y-1) {
-            break;
-        }
-        if (cur_x+1 >= x-3) {
+        // if (cur_y >= y-2) {
+        //     break;
+        // }
+        if (cur_x >= x-4) {
             cur_y += 1;
-            cur_x = 1;
+            cur_x = 2; 
         }
         if (content[i] == '\n') {
             cur_y += 1;
-            cur_x = 1;
+            cur_x = 2;
         } else {
             cur_x += 1;
         }
+        if (cur_y >= max_y) {
+            break;
+        }
+ 
         mvwprintw(win, cur_y, cur_x, "%c", content[i]);
     }
     wrefresh(win);

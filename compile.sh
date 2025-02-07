@@ -1,5 +1,5 @@
-#!/bin/bash
-
+# !/bin/bash
+clear
 # Compile the source code
 g++ ./code/main.cpp -o ./release/main -std=c++23 -lncurses
 

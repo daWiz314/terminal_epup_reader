@@ -33,9 +33,9 @@ int main(int arg, char* args[]) {
             temp_string += temp[i];
         }
         temp_string += "\n";
-        // if (temp_x == y) {
-        //     break;
-        // }
+        if (temp_x == y) {
+            break;
+        }
     }
 
     display_content(temp_string);
@@ -64,12 +64,38 @@ void display_content(std::string content) {
     clear(); // Clear the screen before we use it
     refresh(); // Refresh the empty screen so we can use newwin
     int x, y; // Max bounds
+
+    // TEST STUFF
     getmaxyx(stdscr, y, x); 
     WINDOW *win = newwin(y, x, 0, 0);
     box(win, 0, 0);
-    mvwprintw(win, 0, 1, content.c_str());
+    
+    int cur_x, cur_y = 1;
+    for(int i=0; i<content.size(); i++) {
+        if (cur_y >= y-1) {
+            break;
+        }
+        if (cur_x+1 >= x-3) {
+            cur_y += 1;
+            cur_x = 1;
+        }
+        if (content[i] == '\n') {
+            cur_y += 1;
+            cur_x = 1;
+        } else {
+            cur_x += 1;
+        }
+        mvwprintw(win, cur_y, cur_x, "%c", content[i]);
+    }
     wrefresh(win);
     getch();
+
+    // getmaxyx(stdscr, y, x); 
+    // WINDOW *win = newwin(y, x, 0, 0);
+    // box(win, 0, 0);
+    // mvwprintw(win, 0, 1, content.c_str());
+    // wrefresh(win);
+    // getch();
     endwin();
 }
 

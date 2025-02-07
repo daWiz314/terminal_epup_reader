@@ -37,22 +37,10 @@ int main(int arg, char* args[]) {
         //     break;
         // }
     }
-    // std::cout << temp_string << std::endl;
-    // display_content(temp_string);
 
-    WINDOW *win = newwin(y, x, 0, 0);
-    box(win, 0, 0);
-    wrefresh(win);
-    mvwprintw(win, 0, 0, "Hello World!");
-    wrefresh(win);
-    getch();
+    display_content(temp_string);
 
-    // File output was just to make sure we were actually getting any data
-
-    // std::ofstream file("src/test.txt");
-    // file << temp_string;
-    // file.close();
-    // End ncurses
+   // End ncurses
     endwin();
     return 0;
 }
@@ -73,13 +61,13 @@ void display_content(std::string content) {
     // for(int i=0; i<content.size(); i++) {
     //     mvprintw(i, 0, "%c", content[i]);
     // }
-    clear();
-    int x, y;
-    getmaxyx(stdscr, y, x);
+    clear(); // Clear the screen before we use it
+    refresh(); // Refresh the empty screen so we can use newwin
+    int x, y; // Max bounds
+    getmaxyx(stdscr, y, x); 
     WINDOW *win = newwin(y, x, 0, 0);
     box(win, 0, 0);
-    wrefresh(win);
-    mvwprintw(win, 0, 0, content.c_str());
+    mvwprintw(win, 0, 1, content.c_str());
     wrefresh(win);
     getch();
     endwin();

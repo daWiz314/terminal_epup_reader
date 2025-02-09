@@ -48,6 +48,7 @@ int main(int arg, char* args[]) {
 // Initialize ncurses
 
 void init() {
+    setlocale(LC_ALL, "en_US.UTF-8");
     initscr();
     noecho();
     curs_set(0);
@@ -56,6 +57,7 @@ void init() {
     return;
 }
 
+// TO FIX FOR DISPLAY ERRORS WE NEED TO FIX THIS TO PRINT FOR WIDE CHARACTERS
 
 void display_content(std::string content) {
     // for(int i=0; i<content.size(); i++) {
@@ -83,6 +85,8 @@ void display_content(std::string content) {
         // if (cur_y >= y-2) {
         //     break;
         // }
+        const char * letter; 
+        bool assigned_letter = false;
         if (cur_x >= x-4) {
             cur_y += 1;
             cur_x = 2; 
@@ -96,8 +100,24 @@ void display_content(std::string content) {
         if (cur_y >= max_y) {
             break;
         }
- 
+
+        if (content[i] == '\'') {
+            letter = "'";
+            assigned_letter = true;
+        } else if (content[i] == '-') {
+            letter = "-";
+            assigned_letter = true;
+        }
+
+        if (assigned_letter) {
+            mvwprintw(win, cur_y, cur_x, "%c", letter);
+            // cur_x ++;
+        } else {
+            mvwprintw(win, cur_y, cur_x, "%c", content[i]);
+            // cur_x ++;
+        }
         mvwprintw(win, cur_y, cur_x, "%c", content[i]);
+
     }
     wrefresh(win);
     getch();

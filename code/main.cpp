@@ -1,4 +1,4 @@
-#include </usr/local/Cellar/ncurses/6.5/include/ncursesw/ncurses.h> // Ncurses
+#include <ncurses.h> // Ncurses
 #include <fstream> // File input and output
 #include <string> // For working with strings
 #include <codecvt> // For converting string to wchar_t
@@ -11,7 +11,7 @@
 // Function prototypes
 void init();
 std::string read_file(std::string path);
-void display_content(std::string content);
+void display_content(std::string& content);
 
 
 // Main function
@@ -19,10 +19,6 @@ int main(int arg, char* args[]) {
     init(); // Init ncurses
     std::string content = read_file("src/epup_container/EPUB/c/c5.xhtml"); // Get demo content to read
 
-    endwin();
-
-    std::cout << content << std::endl;
-    return 0;
 
 
     P_object test(content); // Create test object
@@ -51,12 +47,20 @@ int main(int arg, char* args[]) {
         }
     }
 
-    std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
-    std::wstring wide_string = converter.from_bytes(temp_string);
+    
+
+    // printw(temp_string.c_str());
+    // getch();
 
     
 
-    display_content(temp_string);
+
+    // display_content(content);
+    // Displaying with printw seems to print it without extra lines. I think I need to redo the EPUP_Parser file, and if anything get rid of most of it.
+    // I just need to get the content, and then file it down to just the stuff in the <p> tags
+    
+    printw(content.c_str());
+    getch();
 
    // End ncurses
     endwin();
@@ -77,7 +81,7 @@ void init() {
 
 // TO FIX FOR DISPLAY ERRORS WE NEED TO FIX THIS TO PRINT FOR WIDE CHARACTERS
 
-void display_content(std::string content) {
+void display_content(std::string& content) {
     // for(int i=0; i<content.size(); i++) {
     //     mvprintw(i, 0, "%c", content[i]);
     // }
@@ -91,52 +95,48 @@ void display_content(std::string content) {
     WINDOW *win = newwin(y, x, 0, 0);
     box(win, 0, 0);
 
-    // Set up variables
+    int start_x = 2;
+    int start_y = 2;
+
     int max_x = x-3;
-    int max_y = y-1;
-    int start_x, start_y = 3; 
+    int max_y = y-3;
+
     int cur_x = start_x;
     int cur_y = start_y;
 
-    // Actually print the content
-    for(int i=0; i<content.size(); i++) {
-        // if (cur_y >= y-2) {
+    std::vector<std::string>lines;
+
+    for(int i=0; i<content.length(); i++) {
+        std::string temp_content;
+
+        if(content[i] == '\n') {
+            lines.push_back("\n");
+            continue;
+        }
+        if(cur_x >= max_x) {
+            lines.push_back(temp_content);
+            cur_x = start_x;
+            continue;
+        }
+        cur_x ++;
+        temp_content += content[i];
+    }
+
+    printw("%c", lines[0].c_str());
+    getch();
+
+    for(int i=0; i<lines.size(); i++) {
+        mvwprintw(win, cur_y, 1, lines[i].c_str());
+        cur_y ++;
+        // if (cur_y >= max_y) {
         //     break;
         // }
-        const char * letter; 
-        bool assigned_letter = false;
-        if (cur_x >= x-4) {
-            cur_y += 1;
-            cur_x = 2; 
-        }
-        if (content[i] == '\n') {
-            cur_y += 1;
-            cur_x = 2;
-        } else {
-            cur_x += 1;
-        }
-        if (cur_y >= max_y) {
-            break;
-        }
-
-        if (content[i] == '\'') {
-            letter = "'";
-            assigned_letter = true;
-        } else if (content[i] == '-') {
-            letter = "-";
-            assigned_letter = true;
-        }
-
-        if (assigned_letter) {
-            mvwprintw(win, cur_y, cur_x, "%c", letter);
-            // cur_x ++;
-        } else {
-            mvwprintw(win, cur_y, cur_x, "%c", content[i]);
-            // cur_x ++;
-        }
-        mvwprintw(win, cur_y, cur_x, "%c", content[i]);
-
+        wrefresh(win);
     }
+   mvwprintw(win, 2, 2, "Hello World Part 2"); 
+
+    
+    // mvwprintw(win, 0, 0, content.c_str());
     wrefresh(win);
     getch();
 

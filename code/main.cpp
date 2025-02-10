@@ -1,6 +1,9 @@
-#include <ncurses.h>
-#include <fstream>
-#include <string>
+#include </usr/local/Cellar/ncurses/6.5/include/ncursesw/ncurses.h> // Ncurses
+#include <fstream> // File input and output
+#include <string> // For working with strings
+#include <codecvt> // For converting string to wchar_t
+#include <locale>
+#include <iostream>
 
 #include "EPUP_parser.h"
 
@@ -16,13 +19,23 @@ int main(int arg, char* args[]) {
     init(); // Init ncurses
     std::string content = read_file("src/epup_container/EPUB/c/c5.xhtml"); // Get demo content to read
 
+    endwin();
+
+    std::cout << content << std::endl;
+    return 0;
+
+
     P_object test(content); // Create test object
     std::vector<std::string> temp = test.get_content(); // Get content
 
     // TEST STUFF
+
+
     int x, y;
     getmaxyx(stdscr, y, x);
     std::string temp_string;
+
+
     
     int temp_x = 0;
     for (int i=0; i<temp.size(); i++) {
@@ -37,6 +50,11 @@ int main(int arg, char* args[]) {
             break;
         }
     }
+
+    std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
+    std::wstring wide_string = converter.from_bytes(temp_string);
+
+    
 
     display_content(temp_string);
 
